@@ -5,46 +5,46 @@ import "./globals.css"
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
 })
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://fusiondrive.ai"),
-  title: {
-    default: "FusionDrive | Operating Platform for Intelligent Machines",
-    template: "%s | FusionDrive",
-  },
+  metadataBase: new URL("https://fusiondrive.in"),
+  title: "FusionDrive",
   description:
-    "FusionDrive helps robotics organizations deploy, optimize, and scale autonomous fleets with resilient orchestration, adaptive autonomy, and mission assurance.",
+    "FusionDrive is an early-stage robotics hardware company developing modular hardware and embedded systems for intelligent machines. Based in Ahmedabad, India.",
   applicationName: "FusionDrive",
   keywords: [
-    "robotics platform",
-    "autonomous fleet orchestration",
-    "robotics operations",
-    "autonomy infrastructure",
-    "industrial robotics software",
+    "robotics hardware",
+    "motor driver",
+    "embedded systems",
+    "modular robotics",
+    "FusionDrive Motion",
+    "FusionDrive Core",
+    "Ahmedabad robotics",
+    "India robotics startup",
   ],
-  alternates: {
-    canonical: "/",
-  },
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "FusionDrive | Operating Platform for Intelligent Machines",
+    title: "FusionDrive — Robotics Hardware & Embedded Systems",
     description:
-      "Production-ready operating platform for intelligent machines, from fleet orchestration to mission assurance.",
-    url: "https://fusiondrive.ai",
+      "Building modular hardware and embedded systems for intelligent machines. Two working prototypes: FusionDrive Motion and FusionDrive Core.",
+    url: "https://fusiondrive.in",
     siteName: "FusionDrive",
-    locale: "en_US",
+    locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "FusionDrive | Operating Platform for Intelligent Machines",
+    title: "FusionDrive — Robotics Hardware & Embedded Systems",
     description:
-      "Deploy, optimize, and scale autonomous robotic fleets with production-grade software infrastructure.",
+      "Early-stage robotics hardware company building modular motion control and controller platforms for intelligent machines.",
   },
   robots: {
     index: true,
@@ -52,7 +52,6 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
     },
@@ -61,18 +60,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full`}
     >
-      <body className="min-h-full flex flex-col bg-background text-foreground">
+      <body className="min-h-full flex flex-col">
         <a
           href="#main-content"
-          className="sr-only z-[100] m-3 rounded-md bg-cyan-300 px-3 py-2 text-sm font-medium text-slate-950 focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-[200] focus:bg-white focus:text-[#111] focus:px-4 focus:py-2 focus:rounded focus:shadow-md focus:text-sm focus:font-semibold focus:outline-none focus:ring-2 focus:ring-[#1A6FAB]"
         >
           Skip to main content
         </a>

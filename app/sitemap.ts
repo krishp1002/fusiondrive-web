@@ -3,9 +3,9 @@ import type { MetadataRoute } from "next"
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://fusiondrive.ai",
+      url: "https://fusiondrive.in",
       lastModified: new Date(),
-      changeFrequency: "weekly",
+      changeFrequency: "monthly",
       priority: 1,
     },
   ]
